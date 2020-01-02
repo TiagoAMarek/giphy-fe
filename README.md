@@ -1,5 +1,13 @@
 # giphy-fe
 
+I've made this project learn more about frontend development.
+
+## Architecture
+- Vuejs
+- Vuex
+- Bulma
+- Jest
+
 ## Project setup
 ```
 npm install
