@@ -1,19 +1,11 @@
 <template>
   <div class="columns is-multiline">
-    <div class="column is-one-fifth">
-      <GifCard />
-    </div>
-    <div class="column is-one-fifth">
-      <GifCard />
-    </div>
-    <div class="column is-one-fifth">
-      <GifCard />
-    </div>
-    <div class="column is-one-fifth">
-      <GifCard />
-    </div>
-    <div class="column is-one-fifth">
-      <GifCard />
+    <div
+      v-for="gif in gifs"
+      :key="gif.id"
+      class="column is-one-fifth gif-column"
+    >
+      <GifCard :gifData="gif" />
     </div>
   </div>
 </template>
@@ -23,8 +15,15 @@ import GifCard from './GifCard.vue';
 
 export default {
   name: 'GifsList',
+
   components: {
     GifCard,
+  },
+
+  props: {
+    gifs: {
+      type: Array,
+    },
   },
 };
 </script>
