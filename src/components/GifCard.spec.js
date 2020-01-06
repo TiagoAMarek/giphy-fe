@@ -9,7 +9,8 @@ describe('GifCard', () => {
     let wrapper;
     const gifData = {
       title: 'america-mg dudu GIF by SE Palmeiras',
-      url: 'https://media0.giphy.com/media/Yk1EuAp9cSK4HjIjnW/200.gif?cid=ea837b119b07bc08c3057a71f1eb7a761a16bb5ee8424350&rid=200.gif',
+      downsampledUrl: 'https://media2.giphy.com/media/KZe5fWBKlgzkSueFkH/200_d.webp?cid=ea837b116f2f606f6e2e0877406bb5e7c0349d545cd6cc2d&rid=200_d.webp',
+      url: 'https://media2.giphy.com/media/KZe5fWBKlgzkSueFkH/giphy.gif?cid=ea837b116f2f606f6e2e0877406bb5e7c0349d545cd6cc2d&rid=giphy.gif',
     };
 
     describe('and props are sent properly', () => {
@@ -23,7 +24,7 @@ describe('GifCard', () => {
 
       it('should set url into img src attribute', () => {
         const imgContainer = wrapper.find('.image');
-        expect(imgContainer.attributes('src')).toBe(gifData.url);
+        expect(imgContainer.attributes('src')).toBe(gifData.downsampledUrl);
       });
 
       it('should title into img alt attribute', () => {

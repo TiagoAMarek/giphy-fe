@@ -1,7 +1,11 @@
 <template>
   <div class="card">
     <div class="card-image">
-      <img class="image" :src="gifData.url" :alt="gifData.title" />
+      <img
+        class="image"
+        :src="gifData.downsampledUrl"
+        :alt="gifData.title"
+      />
     </div>
     <footer class="card-footer">
       <span

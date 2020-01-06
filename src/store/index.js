@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import GifsStore from './GifsStore';
+import SearchedGifsStore from './SearchedGifsStore';
+import TrendGifsStore from './TrendGifsStore';
 import Services from '@/Services';
 
 const { gifsApi } = Services();
 
 const modules = {
-  GifsStore: GifsStore({ gifsApi }),
+  SearchedGifsStore: SearchedGifsStore({ gifsApi }),
+  TrendGifsStore: TrendGifsStore({ gifsApi }),
 };
 
 Vue.use(Vuex);

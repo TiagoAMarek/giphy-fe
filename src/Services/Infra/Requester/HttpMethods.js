@@ -1,12 +1,7 @@
 export default ({ requestRawInstance }) => {
-  function get(path) {
-    try {
-      return requestRawInstance.get(path);
-    } catch (error) {
-      console.error(error);
-    }
-
-    return null;
+  async function get(path) {
+    const { data } = await requestRawInstance.get(path);
+    return data;
   }
 
   return {
